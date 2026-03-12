@@ -1,5 +1,6 @@
 package com.example.produto.models;
 
+import com.example.produto.enums.StatusProduto;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,6 +17,15 @@ public class Produto {
     private String nome;
     private Double preco;
     private Integer quantidadeEmEstoque;
+    private StatusProduto status;
+
+    public StatusProduto getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusProduto status) {
+        this.status = status;
+    }
 
     public Long getId() {
         return id;
